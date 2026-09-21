@@ -1,0 +1,103 @@
+.delete-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 9, 6, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+  padding: 1.5rem;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.delete-modal-box {
+  background: #111d16;
+  border: 1px solid rgba(244, 63, 94, 0.4);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 440px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(244, 63, 94, 0.2);
+  animation: slideDown 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.delete-icon-wrapper {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: rgba(244, 63, 94, 0.15);
+  border: 1px solid rgba(244, 63, 94, 0.3);
+  color: var(--rose-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-modal-title {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+}
+
+.delete-modal-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.delete-modal-desc strong {
+  color: var(--text-primary);
+}
+
+.delete-modal-desc code {
+  font-family: var(--font-mono);
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  color: #fda4af;
+}
+
+.delete-modal-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.delete-btn-cancel {
+  flex: 1;
+  padding: 0.7rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+}
+
+.delete-btn-cancel:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.delete-btn-confirm {
+  flex: 1;
+  padding: 0.7rem;
+  background: var(--danger-gradient);
+  color: white;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 0 15px rgba(244, 63, 94, 0.35);
+  transition: all 0.2s ease;
+}
+
+.delete-btn-confirm:hover {
+  box-shadow: 0 0 25px rgba(244, 63, 94, 0.6);
+  transform: translateY(-1px);
+}
